@@ -1667,7 +1667,7 @@
   (gr_text "3V Only" (at 126.65 65.95 90) (layer "F.SilkS") (tstamp ae423ad0-089e-42f1-ac3f-6dd239562620)
     (effects (font (size 0.8 0.8) (thickness 0.12)))
   )
-  (gr_text "avr5hat\ngithub.com/gcormier/avr5hat" (at 146.1 67.5) (layer "F.SilkS") (tstamp b6158ff6-0838-47b4-85a6-f31c2e9df860)
+  (gr_text "avr5hat v1\ngithub.com/gcormier/avr5hat" (at 146.1 67.5) (layer "F.SilkS") (tstamp b6158ff6-0838-47b4-85a6-f31c2e9df860)
     (effects (font (size 1.5 1.5) (thickness 0.2)))
   )
   (gr_text "GND\n\nG25\n\nG22\n\nG24\n\nG23\n\nG6" (at 122.65 65.9) (layer "F.SilkS") (tstamp d77f2904-90c7-4287-8531-778e06287eb9)
