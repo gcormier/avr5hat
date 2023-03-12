@@ -908,6 +908,7 @@
     )
   )
 
+
   (junction (at 240.03 27.94) (diameter 0) (color 0 0 0 0)
     (uuid 0c95390d-9957-48db-9a0a-3eae6b24cfb4)
   )
@@ -2487,7 +2488,7 @@
     (property "Reference" "J5" (id 0) (at 21.59 111.76 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "AVR4" (id 1) (at 35.56 111.76 0)
+    (property "Value" "AVR1" (id 1) (at 35.56 111.76 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" (id 2) (at 21.59 121.92 90)
@@ -2861,7 +2862,7 @@
     (property "Reference" "J2" (id 0) (at 21.59 147.32 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "AVR1" (id 1) (at 35.56 147.32 0)
+    (property "Value" "AVR4" (id 1) (at 35.56 147.32 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" (id 2) (at 21.59 157.48 90)
@@ -3068,7 +3069,7 @@
       (reference "J1") (unit 1) (value "GPIO") (footprint "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical")
     )
     (path "/f2368e95-43d7-4fab-aeb9-591f91269af5"
-      (reference "J2") (unit 1) (value "AVR1") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
+      (reference "J2") (unit 1) (value "AVR4") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
     )
     (path "/86c3595a-e733-436f-a0ed-90cc58ad637f"
       (reference "J3") (unit 1) (value "AVR2") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
@@ -3077,7 +3078,7 @@
       (reference "J4") (unit 1) (value "AVR3") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
     )
     (path "/8df16350-7291-48f5-84ce-805b1ec7ca03"
-      (reference "J5") (unit 1) (value "AVR4") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
+      (reference "J5") (unit 1) (value "AVR1") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
     )
     (path "/9333842c-4961-45fa-a86a-739cb70b9fca"
       (reference "J6") (unit 1) (value "AVR5") (footprint "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical")
