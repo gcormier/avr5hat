@@ -585,7 +585,7 @@
     (property "Sheetname" "")
     (path "/4e279780-984e-4b30-a24f-79c6ee89069f")
     (attr smd)
-    (fp_text reference "U1" (at 0 0 -180) (layer "F.SilkS")
+    (fp_text reference "U1" (at 0 0 -180) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp df217f0d-045b-4123-aada-243adc543082)
     )
@@ -1661,6 +1661,9 @@
   (gr_arc (start 100 47) (mid 100.87868 44.87868) (end 103 44) (layer "Edge.Cuts") (width 0.1) (tstamp ccd65f21-b02e-4d31-b8df-11f6ca2d4d24))
   (gr_line (start 100 81) (end 100 97) (layer "Edge.Cuts") (width 0.1) (tstamp e7760343-1bc1-4276-98d8-48a16a705580))
   (gr_line (start 162 44) (end 103 44) (layer "Edge.Cuts") (width 0.1) (tstamp fca60233-ea1e-489e-a685-c8fb6788f150))
+  (gr_text "JLCJLCJLCJLC" (at 132.5 87.9) (layer "B.SilkS") (tstamp 46045347-54d5-456e-9758-a343fd725062)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
   (gr_text "Hardware SPI" (at 132.5 85.8) (layer "F.SilkS") (tstamp 9016af80-d479-46de-a254-0e2e470cac58)
     (effects (font (size 1 1) (thickness 0.15)))
   )
