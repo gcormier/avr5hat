@@ -4,7 +4,7 @@ on:
     paths:
       - '**.kicad_sch'
       - '**.kicad_pcb'
-      - '**kibot.yaml'
+      - '**kibot*.yaml'
   pull_request:
     paths:
       - '**.kicad_sch'
