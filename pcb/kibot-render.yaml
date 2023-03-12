@@ -6,7 +6,7 @@ outputs:
     comment: "STEP file"
     type: step
 
-  - name: 'Rendering'
+  - name: 'Rendering ISO'
     type: render_3d
     options:
       view: top
@@ -16,9 +16,9 @@ outputs:
       ray_tracing: true
       auto_crop: true
       transparent_background: true
-      output: "ortho.png"
+      output: "iso.png"
 
-  - name: 'Rendering'
+  - name: 'Rendering top'
     type: render_3d
     options:
       view: top
