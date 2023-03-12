@@ -15,6 +15,9 @@ sudo avrdude -p $DEVICE -C /home/pi/avrdude_gpio.conf -c linuxspi -P /dev/spidev
 ```
 
 # Pi Setup Notes
+##
+Make sure to add `dtoverlay=spi0-1cs` to your `/boot/config.txt`
+
 ## Useful links
 https://github.com/avrdudes/avrdude/wiki/Building-AVRDUDE-for-Linux
 
