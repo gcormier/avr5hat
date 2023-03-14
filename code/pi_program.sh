@@ -4,7 +4,7 @@
 
 firmware=~/megadesk-v2022.09-t841-serial.hex
 firmware=$2
-echo "Flashing $firmware"
+#echo "Flashing $firmware"
 
 DEVICE=t841
 #PROG=avrhat_linuxspi
