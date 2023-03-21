@@ -99,6 +99,7 @@ def main(stdscr):
     GPIO.setwarnings(False)
     curses.curs_set(0)
     stdscr.keypad(True)
+    stdscr.nodelay(True)
     curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
     curses.init_pair(3, curses.COLOR_YELLOW, curses.COLOR_BLACK)
@@ -116,8 +117,10 @@ def main(stdscr):
                  avr5 != AvrStatus.PRESENT):
             sleep(0.25)
             getAvrStatus()
-            debugCheckOverride(stdscr)
+            #debugCheckOverride(stdscr)
             printAvrStatus(stdscr)
+            if (stdscr.getch() != -1):
+                break;
             
 
 
