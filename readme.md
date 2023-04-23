@@ -6,6 +6,9 @@ Level-shifting from 3.3V to 5V is handled by three TXS0108E.
 
 Heavy inspiration from https://github.com/sparkfun/SparkFun_Pi_AVR_Programmer_HAT
 
+## For sale on Tindie
+I have a kit (soldering required) available on Tindie at <a href="https://www.tindie.com/products/gcormier/avr5hat">https://www.tindie.com/products/gcormier/avr5hat</a>
+
 
 # Flashing Notes
 ```
