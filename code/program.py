@@ -123,7 +123,7 @@ def main(stdscr):
                  avr3 != AvrStatus.PRESENT or
                  avr4 != AvrStatus.PRESENT or
                  avr5 != AvrStatus.PRESENT):
-            sleep(0.25)
+            sleep(1)
             getAvrStatus()
             #debugCheckOverride(stdscr)
             printAvrStatus(stdscr)
@@ -136,35 +136,36 @@ def main(stdscr):
         # Now, everything is inserted
         sleep(1)
         GPIO.cleanup()
+        sleep(0.2)
         if (avr1 == AvrStatus.PRESENT):
             avr1 = AvrStatus.FLASHING
-            p1 = subprocess.Popen(['./pi_program.sh', 'avrhat_linuxspi', firmware], text=False)
+            p1 = subprocess.Popen(['./pi_program.sh', 'avrhat_1', firmware], text=False)
         else:
-            p1 = subprocess.Popen('/usr/bin/pwd')
+            p1 = subprocess.Popen('/usr/bin/pwd > /dev/null')
         
         if (avr2 == AvrStatus.PRESENT):
             avr2 = AvrStatus.FLASHING
             p2 = subprocess.Popen(['./pi_program.sh', 'avrhat_2', firmware], text=False)
         else:
-            p2 = subprocess.Popen('/usr/bin/pwd')
+            p3 = subprocess.Popen('/usr/bin/pwd > /dev/null')
         
         if (avr3 == AvrStatus.PRESENT):
             avr3 = AvrStatus.FLASHING
             p3 = subprocess.Popen(['./pi_program.sh', 'avrhat_3', firmware], text=False)
         else:
-            p3 = subprocess.Popen('/usr/bin/pwd')
+            p3 = subprocess.Popen('/usr/bin/pwd > /dev/null')
         
         if (avr4 == AvrStatus.PRESENT):
             avr4 = AvrStatus.FLASHING
             p4 = subprocess.Popen(['./pi_program.sh', 'avrhat_4', firmware], text=False)
         else:
-            p4 = subprocess.Popen('/usr/bin/pwd')
+            p4 = subprocess.Popen('/usr/bin/pwd > /dev/null')
         
         if (avr5 == AvrStatus.PRESENT):
             avr5 = AvrStatus.FLASHING
             p5 = subprocess.Popen(['./pi_program.sh', 'avrhat_5', firmware], text=False)
         else:
-            p5 = subprocess.Popen('/usr/bin/pwd')
+            p5 = subprocess.Popen('//usr/bin/pwd > /dev/null')
         printAvrStatus(stdscr)
 
         
@@ -196,22 +197,33 @@ def main(stdscr):
 
         # HIGH = Allow code to execute
         setReset(GPIO.HIGH)
-        sleep(2.7)    # sleep 4 seconds to allow megadesk eeprom reset
+        sleep(3)    # sleep 4 seconds to allow megadesk eeprom reset
         
         # Shutup beeps for all
         setReset(GPIO.LOW)
-
+        sleep(1)
         # loop through beep once
         reset = [7, 2, 15, 5, 19]
         for resetIO in reset:
             #print(f'Toggling {resetIO}')
             GPIO.output(resetIO, GPIO.HIGH)
-            sleep(0.5)
+            sleep(0.8)
             GPIO.output(resetIO, GPIO.LOW)
 
         #GPIO.cleanup()
         stdscr.clear()
         getAvrStatus()
         printAvrStatus(stdscr)
+
+        while (avr1 != AvrStatus.MISSING and 
+            avr2 != AvrStatus.MISSING and
+            avr3 != AvrStatus.MISSING and
+            avr4 != AvrStatus.MISSING and
+            avr5 != AvrStatus.MISSING):
+            sleep(1)
+            getAvrStatus()
+            #debugCheckOverride(stdscr)
+            
+            printAvrStatus(stdscr)
 
 wrapper(main)
