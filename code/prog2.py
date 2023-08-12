@@ -29,10 +29,15 @@ def main():
         GPIO.cleanup()
         sleep(0.2)
         p1 = subprocess.Popen(['./pi_program.sh', 'avrhat_1', firmware], text=False)
+        sleep(0.1)
         p2 = subprocess.Popen(['./pi_program.sh', 'avrhat_2', firmware], text=False)
+        sleep(0.1)
         p3 = subprocess.Popen(['./pi_program.sh', 'avrhat_3', firmware], text=False)
+        sleep(0.1)
         p4 = subprocess.Popen(['./pi_program.sh', 'avrhat_4', firmware], text=False)
+        sleep(0.1)
         p5 = subprocess.Popen(['./pi_program.sh', 'avrhat_5', firmware], text=False)
+        sleep(0.1)
         
         
         

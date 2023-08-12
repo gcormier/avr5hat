@@ -19,10 +19,10 @@ EXT_FUSE=0xFE
 
 # Write fuses
 #sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -P /dev/spidev0.0:/dev/gpiochip0:0 -B 250khz -D -v -U hfuse:w:$HIGH_FUSE:m -U lfuse:w:$LOW_FUSE:m -U efuse:w:$EXT_FUSE:m
-sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -B 500kHz -F -v -U hfuse:w:$HIGH_FUSE:m -U lfuse:w:$LOW_FUSE:m -U efuse:w:$EXT_FUSE:m -q -q -q #2>/dev/null
+sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -B 250kHz -F -v -U hfuse:w:$HIGH_FUSE:m -U lfuse:w:$LOW_FUSE:m -U efuse:w:$EXT_FUSE:m -q -q -q #2>/dev/null
 
 # Write program
 #sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -P /dev/spidev0.0:/dev/gpiochip0:0 -B 1.5mhz -D -v -U flash:w:$firmware:i
 # Using -D will break things for some reason.
-sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -B 500kHz -F -v -e -U flash:w:$firmware:i -q -q -q #2>/dev/null
+sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -B 250kHz -F -v -e -U flash:w:$firmware:i -q -q -q #2>/dev/null
 
