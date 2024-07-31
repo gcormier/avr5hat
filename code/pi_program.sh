@@ -14,8 +14,8 @@ PROG=$1
 
 #FUSE BITS
 LOW_FUSE=0xE2
-HIGH_FUSE=0xDE
-EXT_FUSE=0xFE
+HIGH_FUSE=0xD4
+EXT_FUSE=0xF4
 
 # Write fuses
 #sudo avrdude -p $DEVICE -C+./avrdude.avr5hat.conf -c $PROG -P /dev/spidev0.0:/dev/gpiochip0:0 -B 250khz -D -v -U hfuse:w:$HIGH_FUSE:m -U lfuse:w:$LOW_FUSE:m -U efuse:w:$EXT_FUSE:m
